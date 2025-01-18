@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/silverblue-main:latest
+FROM ghcr.io/ublue-os/silverblue-asus-nvidia:latest
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:stable
@@ -13,10 +13,12 @@ FROM ghcr.io/ublue-os/silverblue-main:latest
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-COPY build.sh /tmp/build.sh
+# COPY build.sh /tmp/build.sh
+COPY . /tmp/ctx/
 
 RUN mkdir -p /var/lib/alternatives && \
-    /tmp/build.sh && \
+    /tmp/ctx/build.sh && \
+    rm -rf /tmp/* && \
     ostree container commit && \
     bootc container lint
     
