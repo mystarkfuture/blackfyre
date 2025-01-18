@@ -9,7 +9,6 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # Cleanup unnecessary apps
-dnf remove -y gnome-extensions-app
 dnf remove -y gnome-tour
 dnf remove -y firefox-langpacks
 dnf remove -y firefox
@@ -75,4 +74,7 @@ dnf install -y glibc-devel
 dnf install -y libstdc++-devel
 dnf install -y binutils
 dnf install -y kernel-devel
+
+# Cleanup unnecessary apps
+dnf remove -y gnome-extensions-app
 
