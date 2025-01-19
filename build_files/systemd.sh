@@ -6,6 +6,6 @@ set -ouex pipefail
 systemctl enable podman.socket
 systemctl enable check-sb-key.service
 
-# # start these after first boot - fsroot/usr/libexec/firstboot.sh
-# systemctl enable brew-upgrade.timer
-# systemctl enable brew-update.timer
+# brew
+systemctl enable brew-upgrade.timer
+systemctl enable brew-update.timer
