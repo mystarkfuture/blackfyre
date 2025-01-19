@@ -55,6 +55,7 @@ dnf install -y code
 dnf install -y python3-pip
 dnf install -y libxcrypt-compat
 dnf install -y distrobox
+dnf install -y ublue-brew
 
 # Terminal tools
 dnf install -y zoxide

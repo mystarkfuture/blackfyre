@@ -119,3 +119,12 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
   systemctl reboot
   ```
+
+## Post Install
+
+Post install autostart doesnt work as expected. So, do this manually.
+
+```bash
+sudo systemctl enable brew-upgrade.timer
+sudo systemctl enable brew-update.timer
+```
