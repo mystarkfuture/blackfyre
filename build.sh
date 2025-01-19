@@ -9,6 +9,5 @@ chmod +x /tmp/ctx/build_files/*
 
 /tmp/ctx/build_files/copr.sh
 /tmp/ctx/build_files/packages.sh
-/tmp/ctx/build_files/brew.sh
 /tmp/ctx/build_files/systemd.sh
 /tmp/ctx/build_files/mods.sh
