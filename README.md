@@ -120,11 +120,14 @@ To rebase an existing atomic Fedora installation to the latest build:
   systemctl reboot
   ```
 
-## Post Install
 
-Post install autostart doesnt work as expected. So, do this manually.
+## Scratchpad
 
 ```bash
-sudo systemctl enable brew-upgrade.timer
-sudo systemctl enable brew-update.timer
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/mystarkfuture/blackfyre:latest
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mystarkfuture/blackfyre:latest
+
+
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bluefin-dx:latest
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/bluefin-dx:latest
 ```

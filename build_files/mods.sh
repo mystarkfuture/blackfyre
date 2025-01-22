@@ -10,3 +10,6 @@ echo -e "# zram conf copied from PopOS\nvm.swappiness = 180\nvm.watermark_boost_
 
 # WiFi powersave off
 echo -e "[connection]\nwifi.powersave=2\n" | tee -a /etc/NetworkManager/conf.d/wifi-powersave-off.conf
+
+# udev rules to keep laptop battery charge to 70%
+echo -e 'SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/bin/sh -c '\''echo 70 > /sys/class/power_supply/BAT0/charge_control_end_threshold'\''"' | tee -a /etc/udev/rules.d/r_battery.rules
