@@ -65,18 +65,6 @@ dnf install -y \
     libstdc++-devel \
     binutils \
     kernel-devel
-    # ffmpeg \
-    # gstreamer1-plugin-libav \
-    # gstreamer1-plugins-bad-free-extras \
-    # gstreamer1-plugins-bad-freeworld \
-    # gstreamer1-plugins-ugly \
-    # gstreamer1-vaapi \
-    # mesa-va-drivers-freeworld \
-    # mesa-vdpau-drivers-freeworld \
-    # libva-nvidia-driver \
-    # steam-devices \
-    # intel-media-driver \
-    # libva-intel-driver \
     
 # Cleanup unnecessary apps
 dnf remove -y gnome-extensions-app
