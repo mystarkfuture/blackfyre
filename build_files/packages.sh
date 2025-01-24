@@ -12,27 +12,6 @@ set -ouex pipefail
 dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-
-# Cleanup unnecessary apps
-dnf remove -y gnome-tour \
-    firefox \
-    firefox-langpacks \
-    toolbox
-
-dnf install -y \
-    ffmpeg \
-    gstreamer1-plugin-libav \
-    gstreamer1-plugins-bad-free-extras \
-    gstreamer1-plugins-bad-freeworld \
-    gstreamer1-plugins-ugly \
-    gstreamer1-vaapi \
-    mesa-va-drivers-freeworld \
-    mesa-vdpau-drivers-freeworld \
-    libva-nvidia-driver \
-    steam-devices \
-    intel-media-driver \
-    libva-intel-driver \
-
 # Cleanup unnecessary apps
 dnf remove -y gnome-extensions-app
 
