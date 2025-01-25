@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-# Copy fsroot/ root to /
+# Copy fsroot/ to /
 rsync -rvK /tmp/ctx/fsroot/ /
 
 chmod +x /tmp/ctx/build_files/*

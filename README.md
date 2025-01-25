@@ -131,3 +131,17 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mystarkfuture/blackfyre:l
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bluefin-dx:latest
 rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/bluefin-dx:latest
 ```
+
+
+## Generate ISO
+```bash
+sudo podman run --rm --privileged \
+    --volume .:/build-container-installer/build \
+    --security-opt label=disable --pull=newer \
+    ghcr.io/jasonn3/build-container-installer:latest \
+    IMAGE_REPO="ghcr.io/mystarkfuture" \
+    IMAGE_NAME="blackfyre" \
+    IMAGE_TAG="latest" \
+    VARIANT="Silverblue"
+
+```
