@@ -8,12 +8,6 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# Cleanup unnecessary apps
-dnf remove -y gnome-tour \
-    firefox \
-    firefox-langpacks \
-    toolbox
-
 dnf install -y \
     p7zip \
     p7zip-plugins \
@@ -60,6 +54,3 @@ dnf install -y \
     libstdc++-devel \
     binutils \
     kernel-devel
-    
-# Cleanup unnecessary apps
-dnf remove -y gnome-extensions-app
