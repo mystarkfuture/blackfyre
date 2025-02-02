@@ -53,4 +53,6 @@ dnf install -y \
     glibc-devel \
     libstdc++-devel \
     binutils \
-    kernel-devel
+    kernel-devel \
+    ghostty \
+    veracrypt
