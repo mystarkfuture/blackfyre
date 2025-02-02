@@ -8,51 +8,70 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-dnf install -y \
-    p7zip \
-    p7zip-plugins \
-    wl-clipboard \
-    wireguard-tools \
-    veracrypt \
-    solaar \
-    git-credential-libsecret \
-    input-remapper \
-    lm_sensors \
-    rclone \
-    restic \
-    setools-console \
-    openssh-askpass \
-    epson-inkjet-printer-escpr \
-    epson-inkjet-printer-escpr2 \
-    printer-driver-brlaser \
-    simple-scan \
-    foo2zjs \
-    hplip \
-    firewall-config \
-    gnome-shell-extension-system-monitor \
-    gnome-shell-extension-appindicator \
-    gnome-shell-extension-blur-my-shell \
-    gnome-shell-extension-caffeine \
-    ulauncher \
-    code \
-    python3-pip \
-    libxcrypt-compat \
-    distrobox \
-    ublue-brew \
-    zoxide \
-    stow \
-    git \
-    zsh \
-    fastfetch \
-    ghostty \
-    gcc \
-    g++ \
-    make \
-    automake \
-    autoconf \
-    glibc-devel \
-    libstdc++-devel \
-    binutils \
-    kernel-devel \
-    ghostty \
-    veracrypt
+
+io_utils=(
+    "wl-clipboard"
+    "solaar"
+    "input-remapper"
+    "openssh-askpass" 
+    "epson-inkjet-printer-escpr"
+    "epson-inkjet-printer-escpr2"
+    "printer-driver-brlaser"
+    "simple-scan"
+    "lm_sensors"
+    "foo2zjs"
+    "hplip"
+)
+
+system_utils=(
+    "p7zip"
+    "p7zip-plugins"
+    "wireguard-tools"
+    "setools-console" 
+    "firewall-config"
+    "libxcrypt-compat"
+    "rclone"
+    "restic"
+    "distrobox"
+    "ulauncher"
+    "veracrypt"
+    "zoxide"
+    "stow"
+    "git"
+    "zsh"
+    "fastfetch"
+    "ghostty"
+)
+
+gnome_shell_extensions=(
+    "gnome-shell-extension-system-monitor"
+    "gnome-shell-extension-appindicator"
+    "gnome-shell-extension-blur-my-shell"
+    "gnome-shell-extension-caffeine"
+)
+
+development_utils=(
+    "git-credential-libsecret"
+    "code"
+    "python3-pip"
+    "ublue-brew"
+    "gcc"
+    "g++"
+    "make"
+    "automake"
+    "autoconf"
+    "glibc-devel"
+    "libstdc++-devel"
+    "binutils"
+    "kernel-devel"
+)
+
+packages=(
+  ${io_utils[@]}
+  ${system_utils[@]}
+  ${gnome_shell_extensions[@]}
+  ${development_utils[@]}
+)
+
+# install rpms
+dnf install -y ${packages[@]}
