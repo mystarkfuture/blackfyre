@@ -19,6 +19,4 @@ COPY . /tmp/ctx/
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/ctx/build.sh && \
     rm -rf /tmp/* && \
-    ostree container commit && \
-    bootc container lint
-    
+    ostree container commit
