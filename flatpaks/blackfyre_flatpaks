@@ -29,7 +29,7 @@ app/com.github.hluk.copyq/x86_64/stable
 app/org.deluge_torrent.deluge/x86_64/stable
 app/io.github.flattool.Ignition/x86_64/stable
 app/org.libreoffice.LibreOffice/x86_64/stable
-apap/org.cryptomator.Cryptomator/x86_64/stable
-app/flathub com.todoist.Todoist/x86_64/stable
+app/org.cryptomator.Cryptomator/x86_64/stable
+app/com.todoist.Todoist/x86_64/stable
 runtime/com.fightcade.Fightcade.Wine/x86_64/stable
 runtime/com.obsproject.Studio.Plugin.DroidCam/x86_64/stable
