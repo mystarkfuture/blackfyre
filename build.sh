@@ -12,4 +12,5 @@ chmod +x /tmp/ctx/build_files/*
 /tmp/ctx/build_files/03-brew.sh
 /tmp/ctx/build_files/04-systemd.sh
 /tmp/ctx/build_files/05-mods.sh
-/tmp/ctx/build_files/06-cleanup.sh
+/tmp/ctx/build_files/06-just.sh
+/tmp/ctx/build_files/07-cleanup.sh

@@ -145,3 +145,11 @@ sudo podman run --rm --privileged \
     VARIANT="Silverblue"
 
 ```
+
+
+## Install Flatpaks
+After rebase, you will need to run the command below to install all flatpaks that are shipped with Bazzite and Isengard
+
+```bash
+ujust _install-blackfyre-flatpaks
+```
