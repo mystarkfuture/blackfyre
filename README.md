@@ -153,3 +153,8 @@ After rebase, you will need to run the command below to install all flatpaks tha
 ```bash
 ujust _install-blackfyre-flatpaks
 ```
+
+list of flatpaks held back
+```
+app/org.onlyoffice.desktopeditors/x86_64/stable
+```
