@@ -9,7 +9,6 @@ dnf remove -y gnome-tour \
     toolbox \
     gnome-extensions-app \
     gnome-shell-extension-background-logo \
-    gnome-software-rpm-ostree \
     gnome-terminal-nautilus
 
 # Remove copr repos
