@@ -41,6 +41,7 @@ system_utils=(
     "zsh"
     "fastfetch"
     "ghostty"
+    "input-leap"
 )
 
 gnome_shell_extensions=(
@@ -64,6 +65,7 @@ development_utils=(
     "libstdc++-devel"
     "binutils"
     "kernel-devel"
+    "devpod"
 )
 
 packages=(

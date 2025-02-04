@@ -8,7 +8,9 @@ dnf remove -y gnome-tour \
     firefox-langpacks \
     toolbox \
     gnome-extensions-app \
-    gnome-shell-extension-background-logo
+    gnome-shell-extension-background-logo \
+    gnome-software-rpm-ostree \
+    gnome-terminal-nautilus
 
 # Remove copr repos
 dnf5 -y copr disable pgdev/ghostty 
