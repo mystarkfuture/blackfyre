@@ -17,5 +17,3 @@ systemctl enable dconf-update.service
 systemctl enable flatpak-add-flathub-repo.service
 systemctl enable flatpak-replace-fedora-apps.service
 systemctl enable flatpak-cleanup.timer
-
-systemctl enable create-mount-paths.service
