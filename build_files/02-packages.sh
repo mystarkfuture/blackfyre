@@ -42,7 +42,6 @@ system_utils=(
     "fastfetch"
     "ghostty"
     "input-leap"
-    "util-linux"
 )
 
 gnome_shell_extensions=(
