@@ -130,6 +130,8 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mystarkfuture/blackfyre:l
 
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bluefin-dx:latest
 rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/bluefin-dx:latest
+
+sudo usermod -s /user/bin/zsh $USERNAME
 ```
 
 
@@ -159,3 +161,4 @@ list of flatpaks held back
 app/org.onlyoffice.desktopeditors/x86_64/stable
 app/io.github.sigmasd.stimulator/x86_64/stable
 ```
+
