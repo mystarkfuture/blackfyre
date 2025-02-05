@@ -157,4 +157,5 @@ ujust _install-blackfyre-flatpaks
 list of flatpaks held back
 ```
 app/org.onlyoffice.desktopeditors/x86_64/stable
+app/io.github.sigmasd.stimulator/x86_64/stable
 ```
