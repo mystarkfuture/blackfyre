@@ -132,6 +132,30 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bluefin-dx:latest
 rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/bluefin-dx:latest
 
 sudo usermod -s /user/bin/zsh $USERNAME
+
+
+[Unit]
+Description=Set battery charge thresholds TODO : this needs to be removed in Gnome 48
+After=multi-user.target
+StartLimitBurst=0
+
+[Service]
+Type=oneshot
+Restart=on-failure
+RemainAfterExit=yes
+ExecStart=/bin/bash -c 'echo 78 > /sys/class/power_supply/BAT0/charge_control_start_threshold; echo 85 > /sys/class/power_supply/BAT0/charge_control_end_threshold'
+ExecStop=/bin/bash -c 'echo 100 > /sys/class/power_supply/BAT0/charge_control_end_threshold; echo 99 > /sys/class/power_supply/BAT0/charge_control_start_threshold'
+
+[Install]
+WantedBy=multi-user.target
+
+
+systemctl enable battery-charge-thresholds
+
+
+# udev rules to limit laptop battery charge to 85% - TODO : this needs to be removed in Gnome 48
+echo -e 'SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/bin/sh -c '\''echo 85 > /sys/class/power_supply/BAT0/charge_control_end_threshold'\''"' | tee -a /etc/udev/rules.d/r_battery.rules
+
 ```
 
 
