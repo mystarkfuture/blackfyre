@@ -18,5 +18,5 @@ systemctl enable flatpak-add-flathub-repo.service
 systemctl enable flatpak-replace-fedora-apps.service
 systemctl enable flatpak-cleanup.timer
 
-# to limit laptop battery charging to 85%
+# to limit laptop battery charging to 85% TODO : this needs to be removed in Gnome 48
 systemctl enable battery-charge-thresholds

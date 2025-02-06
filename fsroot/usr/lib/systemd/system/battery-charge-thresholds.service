@@ -1,5 +1,5 @@
 [Unit]
-Description=Set battery charge thresholds
+Description=Set battery charge thresholds TODO : this needs to be removed in Gnome 48
 After=multi-user.target
 StartLimitBurst=0
 
