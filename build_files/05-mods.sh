@@ -10,3 +10,6 @@ echo -e "# zram conf copied from PopOS\nvm.swappiness = 180\nvm.watermark_boost_
 
 # WiFi powersave off
 echo -e "[connection]\nwifi.powersave=2\n" | tee -a /etc/NetworkManager/conf.d/wifi-powersave-off.conf
+
+# WiFi iwlwifi settings to disable 
+echo -e "options iwlwifi disable_11ax=Y 11n_disable=8 power_save=0 \noptions iwlmvm power_scheme=1 \noptions iwlwifi bt_coex_active=N" | tee -a /etc/modprobe.d/iwlwifi.conf
